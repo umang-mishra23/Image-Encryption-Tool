@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Encryptor</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🔐 Image Encryption Tool</h1>
+    {% if error %}<div class="error">{{ error }}</div>{% endif %}
+
+    <form method="POST" enctype="multipart/form-data">
+    <label>Select Mode:</label>
+    <select name="mode">
+        <option value="encrypt">Encrypt</option>
+        <option value="decrypt">Decrypt</option>
+    </select>
+
+    <label>Select Image:</label>
+    <input type="file" name="image" accept="image/*" onchange="previewImage(event)">
+
+    <label>Enter Key or Password:</label>
+    <input type="text" name="key" required>
+
+    <label>Select Method:</label>
+    <select name="method">
+        <option value="add">Additive (+ key)</option>
+        <option value="xor">XOR</option>
+        <option value="shift">RGB Shift</option>
+        <option value="combined">XOR + Shuffle (Advance)</option>
+    </select>
+
+    <button type="submit">Process</button>
+</form>
+
+  </div>
+</body>
+</html>

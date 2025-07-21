@@ -1,0 +1,72 @@
+body {
+  background: #0f0f0f;
+  color: #f0f0f0;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background: #1a1a1a;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+  width: 400px;
+  text-align: center;
+}
+
+h1 {
+  color: #00ffff;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  text-align: left;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #b0ffff;
+}
+
+input[type="file"],
+input[type="text"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 8px;
+  background: #222;
+  color: #fff;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0,255,255,0.2);
+}
+
+button, .download-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(to right, #00ffff, #0077ff);
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0,255,255,0.4);
+  transition: 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+button:hover, .download-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0,255,255,0.6);
+}
+
+.error {
+  color: #ff6b6b;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
